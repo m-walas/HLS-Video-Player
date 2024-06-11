@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HLS Video Player</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>HLS Video Player</h1>
+            <p>by m.walas</p>
+        </header>
+        <main>
+            <div class="video-container">
+                <video id="video" controls></video>
+            </div>
+            <div id="loader" class="loader">
+                <i class="fas fa-spinner fa-spin"></i>
+            </div>
+            <div class="controls">
+                <label for="playlist">Select Quality: </label>
+                <select id="playlist">
+                    <option value="playlist_720p.m3u8">720p</option>
+                    <option value="playlist_480p.m3u8">480p</option>
+                    <option value="playlist_360p.m3u8">360p</option>
+                </select>
+                <div class="info">
+                    <p><strong>Bitrate:</strong> <span id="bitrate">N/A</span></p>
+                    <p><strong>Resolution:</strong> <span id="resolution">N/A</span></p>
+                    <p><strong>Video Codec:</strong> <span id="videoCodec">N/A</span></p>
+                    <p><strong>Audio Codec:</strong> <span id="audioCodec">N/A</span></p>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <script src="script.js"></script>
+</body>
+</html>

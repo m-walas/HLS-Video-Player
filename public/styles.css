@@ -1,0 +1,126 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: #121212;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    transition: background 0.3s, transform 0.3s;
+    animation: fadeIn 1s ease-out;
+}
+
+header h1 {
+    font-size: 2em;
+    margin: 0;
+    padding: 0;
+    color: #ff00ff;
+    text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 15px #ff00ff, 0 0 20px #ff00ff;
+}
+
+header p {
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+    opacity: 0.8;
+    color: #00ffff;
+    text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff, 0 0 20px #00ffff;
+}
+
+.video-container {
+    position: relative;
+    margin: 20px 0;
+}
+
+video {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s;
+}
+
+video:hover {
+    transform: scale(1.02);
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.controls label {
+    margin-right: 10px;
+}
+
+.controls select {
+    padding: 5px 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    background: #00ffff;
+    color: #000;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.controls select:hover {
+    background: #00dfff;
+    transform: scale(1.05);
+    box-shadow: 0 0 5px #00cfff, 0 0 10px #00cfff, 0 0 15px #00cfff;
+}
+
+.info {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.info p {
+    margin: 5px 0;
+    transition: color 0.3s;
+}
+
+.info p:hover {
+    color: #ff00ff;
+}
+
+.loader {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ff00ff;
+    font-size: 3em;
+}
+
+.video-container.loading video {
+    opacity: 0.5;
+}
+
+.video-container.loading .loader {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
