@@ -1,0 +1,11 @@
+# Node.js
+node_modules/
+npm-debug.log
+.DS_Store
+
+# HLS segments and playlists
+*.ts
+*.m3u8
+
+# MacOS
+.DS_Store
