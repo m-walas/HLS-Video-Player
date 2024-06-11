@@ -1,7 +1,6 @@
 # Node.js
 node_modules/
 npm-debug.log
-.DS_Store
 
 # HLS segments and playlists
 *.ts
@@ -9,3 +8,15 @@ npm-debug.log
 
 # MacOS
 .DS_Store
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# dotenv environment variables file
+.env
+
+# Ignore built assets
+dist/
+build/
